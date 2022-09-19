@@ -46,19 +46,22 @@ The textures should have the same name followed by a color postfix.
   Name: Name of the ShipFrame ingame,
   Description: Description of the ShipFrame ingame,
   NameOfObject: Name of the prefab you edited,
-  ShipBaseStats: Object defining the stats of the ShipFrame,
-  Health: float,
-  Speed: float,
-  TurnRate: float,
-  Acceleration: float,
-  MetalCost: float,
-  PowerCost: float,
-  BuildTime: float – Time in seconds,
-  ShipClass: string - [ Harvester | Corvette | Frigate | Cruiser | Destroyer | Battlecruiser | Super Battlecruiser ],
-  ThumbNail: string – Name of the thumbnail file,
-  UnitProperties: Object defining properties of the ShipFrame,
-  UnitType: „Unit“ – Only unit available at the moment,
-  ArmorType: string – [ Light | Medium | Heavy ]
+  ShipBaseStats: { Object defining the stats of the ShipFrame
+    Health: float,
+    Speed: float,
+    TurnRate: float,
+    Acceleration: float,
+    MetalCost: float,
+    PowerCost: float,
+    BuildTime: float – Time in seconds,
+    ShipClass: string - [ Harvester | Corvette | Frigate | Cruiser | Destroyer | Battlecruiser | Super Battlecruiser ],
+    ThumbNail: string – Name of the thumbnail file
+  },
+  UnitProperties: { Object defining properties of the ShipFrame
+    UnitType: „Unit“ – Only unit available at the moment,
+    ArmorType: string – [ Light | Medium | Heavy ]
+  },
+  BuiltInModules: string[] - List of built-in modules - [ Composite Shield | Laser Shield | Mammoth Shield | Modular Shield | Shield Booster | Shield Generator | Shield Module | Strengthened bulkheads | Structural integrity enhancer | Toughnax | Reload cycler | Reload optimization | Simplified construction | Coolant capacitators | Heatsinks | Recycled materials | Recycled plating | Smart constructing | Illion Cells | Recycled powercells | Arphlax | Impact enhancer | Roanoke Arcor | Weapon booster | Glassius Lens | Optic sensor | Arteus enhancer | Engine booster ]
 }
 ```
 
