@@ -1,7 +1,7 @@
 # StellarWarfareModEditor
 ## Setup
 1. Install Unity Editor version [2020.2.0b7](https://unity3d.com/unity/beta/2020.2.0b7)
-2. Import the unity [package](https://github.com/MrBoneCrash/StellarWarfareModEditor/blob/main/SWEditor_3.unitypackage).
+2. Import the unity [package](https://github.com/MrBoneCrash/StellarWarfareModEditor/blob/main/SWEditor_4.unitypackage).
 
 ## Ship Modification
 
