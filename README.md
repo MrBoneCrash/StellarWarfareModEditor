@@ -3,7 +3,9 @@
 1. Install Unity Editor version [2020.2.0b7](https://unity3d.com/unity/beta/2020.2.0b7)
 2. Import the unity [package](https://github.com/MrBoneCrash/StellarWarfareModEditor/blob/main/SWEditor_3.unitypackage).
 
-## Edit
+## Ship Modification
+
+### Edit
 1. Go to Assets/Resources/Mod and open the ModExample prefab (you can rename it)
 1. Add all needed things (models, textures, …) to this folder
 1. Dont change the scale of a gameobject
@@ -17,11 +19,11 @@
 1. Move, duplicate or edit the engineFlames as you like.
 1. Set the height of the selection circle.
 
-## Textures
+### Textures
 If you have color variants, add the textures to the mod folder.
 The textures should have the same name followed by a color postfix.
 
-### Available Colors:
+#### Available Colors:
 - Blue
 - Black
 - Grey
@@ -31,13 +33,13 @@ The textures should have the same name followed by a color postfix.
 - Azure
 - Green
 
-### Structure:
+#### Structure:
 - Standart texture name: Texture_Blue
 - Variant texture name: Texture_Red
 - Variant texture name: Texture_Green
 - ...
 
-## Config
+### Config
 1. Edit the config.json (versions are not relevant at the moment)
 1. The shipModifications.json is a list of objects which are individual ships
 
@@ -65,6 +67,41 @@ The textures should have the same name followed by a color postfix.
 }
 ```
 
+## Module Modification
+
+1. The modulesModification.json is a list of objects which are individual modules
+
+```
+{
+	"Name": Name of the Module,
+	"Description": Description of the Module,
+	"Flavour": Story Description of the Module,
+	"FlatBonuses": {
+		"Health": 0,
+		"Speed": 0,
+		"WeaponRange": 0,
+		"WeaponDamage": 0,
+		"NumProjectilesPerSalvo": 0,
+		"MetalCostReduction": 0,
+		"PowerCostReduction": 0,
+		"ShieldHealth": 0
+	},
+	"PercentageBonuses": {
+		"Health": 0,
+		"Speed": 0,
+		"WeaponCoolDown": 0,
+		"WeaponRange": 0,
+		"WeaponDamage": 0,
+		"NumProjectilesPerSalvo": 0,
+		"MetalCostReduction": 0,
+		"PowerCostReduction": 0,
+		"BuildTimeReduction": 0,
+		"ShieldRegeneration": 0,
+		"ShieldValueBasedOnHP": 0
+	}
+}
+```
+
 ## Finalisation
 1. Make sure all needed files are in Assets/Resources/Mod
 1. Click on StellarWarfareEditor/Build Mod (Menu at the top)
@@ -74,4 +111,5 @@ The textures should have the same name followed by a color postfix.
 
 ## Notes
 Muliplayer games can only be played when all players have the same mods.
+Modded modules can also be used as built-in module of modded ships. 
 If you find a bug, please let us know in the report-bugs channel
