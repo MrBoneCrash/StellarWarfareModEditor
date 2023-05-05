@@ -1,6 +1,6 @@
 # StellarWarfareModEditor
 ## Setup
-1. Install Unity Editor version [2020.2.0b7](https://unity3d.com/unity/beta/2020.2.0b7)
+1. Install Unity Editor with exactly this version [2020.2.0b7](https://unity3d.com/unity/beta/2020.2.0b7) (You need Unity Hub to login. Check the version while creating the Editor Project.)
 2. Import the unity [package](https://github.com/MrBoneCrash/StellarWarfareModEditor/blob/main/SWEditor_4.unitypackage).
 
 ## Ship Modification
@@ -9,9 +9,9 @@
 1. Go to Assets/Resources/Mod and open the ModExample prefab (you can rename it)
 1. Add all needed things (models, textures, …) to this folder
 1. Dont change the scale of a gameobject
-1. Add your mesh as child of „Mesh“
+1. Add your mesh as child of the „Mesh“ game object
 1. Add your mesh to the MeshCollider on the root object
-1. Place the TurretSlot[1..5] on the positions where the turrets should be (Dont rotate them, even below the ship, this will be detected automatically)
+1. Place the TurretSlot[1..5] on the positions where the turrets should be (Dont rotate them, even below the ship, this will be detected automatically. Make sure the Turrets are not inside the mesh collider.)
 1. TurretSlot count can be 1 – 5, ModuleSlot count can be 1 – 4
 1. Placement of the ModuleSlots should be inside of the model
 1. Place ImpactPoint[1..5] on places on your ship where it should be targeted (cockpit, thrusters, …) (Should be exactly 5)
@@ -103,7 +103,7 @@ The textures should have the same name followed by a color postfix.
 ```
 
 ## Finalisation
-1. Make sure all needed files are in Assets/Resources/Mod
+1. Make sure all needed files (only needed files !!!) are in Assets/Resources/Mod
 1. Click on StellarWarfareEditor/Build Mod (Menu at the top)
 1. Get your mod file from Assets/ModExport (you may have to update the folder after generation (ctrl + r))
 1. Name your mod.unity3d file, this will be the ingame name of your mod. (ExampleMod.unity3d)
