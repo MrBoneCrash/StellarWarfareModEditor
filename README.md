@@ -1,7 +1,7 @@
 # StellarWarfareModEditor
 ## Setup
 1. Install Unity Editor with exactly this version [2020.2.0b7](https://unity3d.com/unity/beta/2020.2.0b7) (You need Unity Hub to login. Check the version while creating the Editor Project.)
-2. Import the unity [package](https://github.com/MrBoneCrash/StellarWarfareModEditor/blob/main/SWEditor_4.unitypackage).
+2. Import the unity [package](https://github.com/MrBoneCrash/StellarWarfareModEditor/blob/main/SWEditor_5.unitypackage).
 
 ## Ship Modification
 
@@ -18,6 +18,9 @@
 1. Enable the MeshRenderer on the shield and fit the size.
 1. Move, duplicate or edit the engineFlames as you like.
 1. Set the height of the selection circle.
+
+### Mod Logo
+If your mod is loaded locally (Documents/TenseGames/StellarWarfare/Mods) you can add a Logo.png in the root of you mod which will be shown in the modlist.
 
 ### Textures
 If you have color variants, add the textures to the mod folder.
@@ -63,7 +66,20 @@ The textures should have the same name followed by a color postfix.
     UnitType: „Unit“ – Only unit available at the moment,
     ArmorType: string – [ Light | Medium | Heavy ]
   },
-  BuiltInModules: string[] - List of built-in modules - [ Composite Shield | Laser Shield | Mammoth Shield | Modular Shield | Shield Booster | Shield Generator | Shield Module | Strengthened bulkheads | Structural integrity enhancer | Toughnax | Reload cycler | Reload optimization | Simplified construction | Coolant capacitators | Heatsinks | Recycled materials | Recycled plating | Smart constructing | Illion Cells | Recycled powercells | Arphlax | Impact enhancer | Roanoke Arcor | Weapon booster | Glassius Lens | Optic sensor | Arteus enhancer | Engine booster ]
+  BuiltInModules: string[] - List of built-in modules - [ Composite Shield | Laser Shield | Mammoth Shield | Modular Shield | Shield Booster | Shield Generator | Shield Module | Strengthened bulkheads | Structural integrity enhancer | Toughnax | Reload cycler | Reload optimization | Simplified construction | Coolant capacitators | Heatsinks | Recycled materials | Recycled plating | Smart constructing | Illion Cells | Recycled powercells | Arphlax | Impact enhancer | Roanoke Arcor | Weapon booster | Glassius Lens | Optic sensor | Arteus enhancer | Engine booster ],
+  FlatBonuses: { 
+  	WeaponRange: float,
+  	WeaponDamage: float,
+    NumProjectilesPerSalvo: int,
+  	ShieldHealth: float
+  },
+  PercentageBonuses: {
+  	WeaponCoolDown: float,
+  	WeaponRange: float,
+  	WeaponDamage: float,
+  	NumProjectilesPerSalvo: int,
+  	ShieldRegeneration: float
+  }
 }
 ```
 
